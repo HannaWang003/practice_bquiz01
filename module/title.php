@@ -1,12 +1,12 @@
 <style>
-    .module-new {
-        margin: auto;
-    }
+.module {
+    margin: auto;
+}
 </style>
 <form action="../api/new-title.php" method="post" enctype="multipart/form-data">
     <div class="t">新增標題區圖片</div>
     <hr>
-    <table class="module-new">
+    <table class="module">
         <tr>
             <td style="text-align: end;">標題區圖片:</td>
             <td><input type="file" name="img"></td>
