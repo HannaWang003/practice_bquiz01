@@ -1,9 +1,9 @@
 <style>
-.module {
-    margin: auto;
-}
+    .module {
+        margin: auto;
+    }
 </style>
-<form action="../api/new-title.php" method="post" enctype="multipart/form-data">
+<form action="../api/add.php?do=<?= $_GET['do'] ?>" method="post" enctype="multipart/form-data">
     <div class="t">新增標題區圖片</div>
     <hr>
     <table class="module">

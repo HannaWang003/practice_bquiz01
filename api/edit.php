@@ -12,7 +12,8 @@ foreach ($_POST['id'] as $key => $id) {
         } else {
             $row['sh'] = 0;
         }
+        $row['text'] = $_POST['text'][$key];
         $DB->save($row);
     }
 }
-to("../back.php?do=title");
+to("../back.php?do=$table");

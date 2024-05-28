@@ -24,7 +24,8 @@ include_once "./api/db.php";
     </div>
     <div id="main">
         <a title="" href="?">
-            <div class="ti" style="background:url('use/'); background-size:cover;"></div>
+            <div class="ti"
+                style="background:url('../img/<?= $Title->find(['sh' => 1])['img'] ?>'); background-size:cover;"></div>
             <!--標題-->
         </a>
         <div id="ms">
@@ -91,15 +92,15 @@ include_once "./api/db.php";
                     </tbody>
                 </table>
                 <?php
-				$do = $_GET['do'] ?? "title";
-				$file = "./back/{$do}.php";
-				if (file_exists($file)) {
-					include $file;
-				} else {
-					include "./back/title.php";
-				}
+                $do = $_GET['do'] ?? "title";
+                $file = "./back/{$do}.php";
+                if (file_exists($file)) {
+                    include $file;
+                } else {
+                    include "./back/title.php";
+                }
 
-				?>
+                ?>
             </div>
         </div>
         <div style="clear:both;"></div>
