@@ -12,7 +12,12 @@ foreach ($_POST['id'] as $key => $id) {
         } else {
             $row['sh'] = 0;
         }
-        $row['text'] = $_POST['text'][$key];
+        switch ($table) {
+            case "title":
+            case "ad":
+                $row['text'] = $_POST['text'][$key];
+                break;
+        }
         $DB->save($row);
     }
 }

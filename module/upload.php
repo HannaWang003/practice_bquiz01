@@ -11,13 +11,27 @@
             case "title":
                 echo "更新網站標題圖片";
                 break;
+            case "mvim":
+                echo "更新動畫圖片";
+                break;
         }
         ?>
     </div>
     <hr>
     <table class="module">
         <tr>
-            <td style="text-align: end;">標題區圖片:</td>
+            <td style="text-align: end;">
+                <?php
+switch($_GET['do']){
+    case "title":
+ echo "標題區圖片:";
+ break;
+    case "mvim":
+ echo "動畫圖片:";
+ break;
+}
+            ?>
+            </td>
             <td><input type="file" name="img"></td>
         </tr>
         <tr>
