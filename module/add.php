@@ -19,6 +19,12 @@ $table = $_GET['do'];
             case "mvim":
                 echo "新增動畫圖片:";
                 break;
+            case "image":
+                echo "新增校園映像圖片:";
+                break;
+            case "news":
+                echo "新增最新消息資料:";
+                break;
         }
         ?>
     </div>
@@ -38,6 +44,13 @@ $table = $_GET['do'];
             <td style="text-align: end;">動畫圖片:</td>
             <td><input type="file" name="img"></td>
             <?php
+                    break;
+                case "image":
+                ?>
+            <td style="text-align: end;">校園映像圖片:</td>
+            <td><input type="file" name="img"></td>
+            <?php
+                    break;
             }
             ?>
         </tr>
@@ -51,6 +64,9 @@ $table = $_GET['do'];
                     case "ad":
                         echo "動態文字廣告:";
                         break;
+                    case "news":
+                        echo "最新消息資料:";
+                        break;
                 }
                 ?>
             </td>
@@ -62,6 +78,12 @@ $table = $_GET['do'];
                 ?>
                 <input type="text" name="text">
                 <?php
+                        break;
+                    case "news":
+                    ?>
+                <textarea name="text"></textarea>
+                <?php
+                        break;
                 }
 
                 ?>

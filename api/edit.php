@@ -15,6 +15,7 @@ foreach ($_POST['id'] as $key => $id) {
         switch ($table) {
             case "title":
             case "ad":
+            case "news":
                 $row['text'] = $_POST['text'][$key];
                 break;
         }
