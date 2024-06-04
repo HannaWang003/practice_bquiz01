@@ -7,7 +7,7 @@ foreach ($_POST['id'] as $key => $id) {
         $DB->del($id);
     } else {
         $row = $DB->find($id);
-        if (in_array($id, $_POST['sh'])) {
+        if (isset($_POST['sh']) && in_array($id, $_POST['sh'])) {
             $row['sh'] = 1;
         } else {
             $row['sh'] = 0;
@@ -18,6 +18,9 @@ foreach ($_POST['id'] as $key => $id) {
             case "news":
                 $row['text'] = $_POST['text'][$key];
                 break;
+            case "menu":
+                $row['text'] = $_POST['text'][$key];
+                $row['url'] = $_POST['url'][$key];
         }
         $DB->save($row);
     }
