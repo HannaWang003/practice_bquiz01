@@ -24,9 +24,9 @@ include_once "./api/db.php";
     </div>
     <iframe style="display:none;" name="back" id="back"></iframe>
     <div id="main">
-        <a title="" href="./home_files/home.htm">
+        <a title="" href="./index.php">
             <div class="ti"
-                style="background:url('../img/<?=$Title->find(['sh'=>1])['img']?>'); background-size:cover;"></div>
+                style="background:url('../img/<?= $Title->find(['sh' => 1])['img'] ?>'); background-size:cover;"></div>
             <!--標題-->
         </a>
         <div id="ms">
@@ -78,7 +78,7 @@ include_once "./api/db.php";
             <div class="di di ad" style="height:540px; width:23%; padding:0px; margin-left:22px; float:left; ">
                 <!--右邊-->
                 <button style="width:100%; margin-left:auto; margin-right:auto; margin-top:2px; height:50px;"
-                    onclick="lo('?do=admin')">管理登入</button>
+                    onclick="lo('?do=login')">管理登入</button>
                 <div style="width:89%; height:480px;" class="dbor">
                     <span class="t botli">校園映象區</span>
                     <script>
